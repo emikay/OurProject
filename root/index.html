@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Using jQuery</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <!-- <script src="scripts/jquery-min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+   
+       <script>
+            $(document).ready(function() {
+                /*
+                $(selector).action();
+                $("header h2").hide();
+                */
+                $('.show').hide();
+                
+                $('a.show').click(function(){
+                    $('article:nth-of-type(2)').fadeIn('slow');
+                    $('.show').hide(); // changes display to none
+                });
+                
+                $('.hide').hover(function(){
+                    $('article:nth-of-type(2)').hide();
+                    $('.show').show();
+                });
+                
+                
+            }); // end ready
+       </script>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Hello</h1>
+            <h2>Sub heading message</h2>
+        </header>
+        <main>
+            <article>
+                <h2>Article heading 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quam quas repellendus est. Qui minima officiis pariatur atque nisi, voluptatibus porro cum dolorum adipisci, fuga cumque facilis placeat accusamus ducimus. <a href="#" class="hide">hide text</a></p>
+            </article>
+            <!--a.show[#]-->
+            <a href="#" class="show">show text</a>
+
+            <article>
+                <h2>Article heading 2</h2>
+                <p>Inventore incidunt pariatur ipsum natus nostrum neque maiores laudantium labore consequuntur, ut delectus commodi, saepe tempore quo? Corporis, nostrum soluta nemo eum aliquid dolore labore, minima voluptates placeat obcaecati iste.</p>
+            </article>
+
+            <article>
+                <h2>Article heading 3</h2>
+                <p>At corporis aspernatur aperiam inventore minus, laborum dolor illo cupiditate debitis quidem iure ea dignissimos. Molestiae quibusdam ratione id praesentium consequatur necessitatibus explicabo dicta, perspiciatis suscipit inventore similique ipsa, aliquam.</p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>Copyright 2025</p>
+        </footer>
+    </body>
+    
+</html>
